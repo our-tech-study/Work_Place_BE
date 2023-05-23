@@ -1,9 +1,8 @@
-package ec.study.ecstudy.service.test.impl;
+package ec.study.ecstudy.product.service;
 
 import ec.study.ecstudy.data.test.dto.ProductDto;
 import ec.study.ecstudy.data.test.entity.ProductEntity;
 import ec.study.ecstudy.data.test.handler.ProductDataHandler;
-import ec.study.ecstudy.service.test.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

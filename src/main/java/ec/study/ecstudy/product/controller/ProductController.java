@@ -1,7 +1,7 @@
-package ec.study.ecstudy.controller.test;
+package ec.study.ecstudy.product.controller;
 
 import ec.study.ecstudy.data.test.dto.ProductDto;
-import ec.study.ecstudy.service.test.ProductService;
+import ec.study.ecstudy.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
