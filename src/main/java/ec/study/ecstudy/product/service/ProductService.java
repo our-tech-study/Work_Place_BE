@@ -1,4 +1,4 @@
-package ec.study.ecstudy.service.test;
+package ec.study.ecstudy.product.service;
 
 import ec.study.ecstudy.data.test.dto.ProductDto;
 
