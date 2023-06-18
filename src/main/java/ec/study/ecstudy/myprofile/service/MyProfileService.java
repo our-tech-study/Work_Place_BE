@@ -1,8 +1,9 @@
 package ec.study.ecstudy.myprofile.service;
 
 import ec.study.ecstudy.myprofile.domain.MyProfile;
+import ec.study.ecstudy.myprofile.domain.MyProfileId;
 import ec.study.ecstudy.myprofile.query.MyProfileDao;
-import ec.study.ecstudy.myprofile.query.data.AddableProfileItem;
+import ec.study.ecstudy.myprofile.query.data.UpdateProfileValueDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,23 +19,33 @@ public class MyProfileService {
         this.dao = dao;
     }
 
-    public List<MyProfile> getMyProfile(String empNo)
+    public List<MyProfile> getUsedItems(String empNo)
     {
-        return dao.getMyProfile(empNo);
+        return dao.getUsedItems(empNo);
     }
 
-    public List<AddableProfileItem> getUsableItems(String empNo)
+    public List<MyProfile> getUnusedItems(String empNo)
     {
-        return dao.getUsableItems(empNo);
+        return dao.getUnusedItems(empNo);
     }
 
-    public void useItem(AddableProfileItem item)
+    public void useItem(MyProfileId id)
     {
-        dao.useItem(item);
+        dao.useItem(id);
     }
 
-    public void saveItem(MyProfile item)
+    public void addNewItem(MyProfile item)
     {
-        dao.saveItem(item);
+        dao.addNewItem(item);
+    }
+
+    public void updateProfileValue(UpdateProfileValueDto item)
+    {
+        dao.updateProfileValue(item);
+    }
+
+    public  void unuseItem(MyProfileId id)
+    {
+        dao.unuseItem(id);
     }
 }
